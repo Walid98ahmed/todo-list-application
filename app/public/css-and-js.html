@@ -1,0 +1,151 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <title>todo</title> -->
+    <!-- <link rel='stylesheet' href='../css/styles.css'> -->
+    <!-- <link rel="stylesheet" href="../css-js/html/css/styles.css" type="text/css">
+
+</head>
+<body>
+
+
+    <button id="add">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+            ></path>
+          </svg>
+      </button>
+    
+    <div id="container">
+        <header>
+          <input type="text" placeholder="Enter an activity..." id="item" />
+          <button id="add"></button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+            ></path>
+          </svg>
+        </button>
+
+        </header>
+        <h2>To Do</h2>
+        <ul class="todo" id="todo">  
+            <li>
+            item1
+            <span class="buttons">
+              <button class="remove"></button>
+              <button class="complete"></button>
+            </span>
+          </li>
+        </ul>
+        
+        <h2>Completed</h2>
+        <ul class="completed" id="completed"></ul>
+      </div>
+      <script src="../javascript/script.js"></script>
+
+</body>
+</html> -->
+
+ 
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css-js/html/css/styles.css" type="text/css">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="app">
+    <h4 class="mb-3">TODO App</h4>
+
+
+    <div id="addNew" data-bs-toggle="modal" data-bs-target="#form">
+      <span>Add New Task</span>
+      <i class="fas fa-plus"></i>
+    </div>
+
+    <!-- Modal -->
+    <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Task Title</p>
+            <input type="text" class="form-control" name="" id="textInput">
+            <div id="msg"></div>
+            <br>
+            <p>Due Date</p>
+            <input type="date" class="form-control" name="" id="dateInput">
+            <br>
+            <p>Description</p>
+            <textarea name="" class="form-control" id="textarea" cols="30" rows="5"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" id="add" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <h5 class="text-center my-3">Tasks</h5>
+
+    <div id="tasks">
+
+    </div>
+  </div>
+  
+</body>
+<!-- <script src="main.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="../javascript/script.js">
+
+    
+    var firebaseConfig = {
+  apiKey: "AIzaSyB57R12xoRzBqAao8Jk0P9Mr5xTOoaIW4s",
+  authDomain: "task-user-athentication.firebaseapp.com",
+  projectId: "task-user-athentication",
+  storageBucket: "task-user-athentication.appspot.com",
+  messagingSenderId: "285519778988",
+  appId: "1:285519778988:web:3290cb45511dd9d72bbb09",
+  measurementId: "G-5D4Q4EPYWS"
+};
+
+// Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+
+  </script>
+
+</html>
